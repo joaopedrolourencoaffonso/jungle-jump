@@ -1,6 +1,8 @@
 # Jungle Jump!
 Um infinite-runner simples, feito com javascript, html e css com base [nesse tutorial](https://www.youtube.com/watch?v=r9buAwVBDhA) do [Manual do Dev](https://www.youtube.com/@ManualdoDev).
 
+Você pode ver uma demonstração do jogo [aqui](https://youtu.be/YgnARn5XjNY).
+
 ## Créditos
 
 Todos os arquivos aqui disponibilizados são edições de arquivos disponíveis publicamente. Eles **não** são de meu direito autoral e sugiro que, para qualquer projeto, você faça download dos arquivos originais:
