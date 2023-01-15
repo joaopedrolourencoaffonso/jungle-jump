@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87CEEB,#E0F6FF);
+}
+
+.creditos {
+  font-size: 10px;
+  line-height:2em;
+}
+
+.bottom-ground {
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 160px;
+  animation: tree-animation 2s infinite linear;
+}
+
+.mario {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+
+.jump {  
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  width: 550px;
+  position: absolute;
+  animation: clouds-animation 15s infinite linear;
+}
+
+.ground {
+  width: 150%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  animation: ground-animation 2s infinite linear;
+}
+
+.ground2 {
+  width: 150%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  animation: ground2-animation 2s infinite linear;
+}
+
+.score {
+  border-style: double;
+  width: auto;
+  width: 300px;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 0);
+  border-color: rgb(255, 255, 255);
+  z-index: 10;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 960px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/*Animacao do pop up*/
+
+@keyframes tree-animation {
+  from {
+   right: -80px;
+  }
+  to {
+   right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  25% {
+    bottom: 300px;
+  }
+
+  50% {
+    bottom: 310px;
+  }
+
+  75% {
+    bottom: 300px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+   right: -550px;
+  }
+  to {
+   right: 100%;
+  }
+}
+
+@keyframes ground-animation {
+  from {
+   right: 0%;
+  }
+  to {
+   right: 100%;
+  }
+}
+
+@keyframes ground2-animation {
+  from {
+   right: -100%;
+  }
+  to {
+   right: 0%;
+  }
+}
