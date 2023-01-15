@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+        <script src="{{ url_for('static',filename='script.js') }}" defer></script>
+        <title>Jungle Jump</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+        <style>
+        body {
+            font-family: 'Press Start 2P';font-size: 22px;
+        }
+        </style>
+
+    </head>
+    <body>
+        <!--<p>Teste! Testando! Teste! Teste! Aqui é o Patrick!....</p>-->
+        <div class="game-board">
+
+         <div id="score" class="score"><p>Score:  <a id="counter">0</a> m</p></div>
+
+         <div class="popup">
+          <span class="popuptext" id="myPopup" onclick="window.location.reload()">Nada mal! Clique aqui para jogar de novo!</span>
+         </div>
+
+         <img src="{{ url_for('static',filename='runner.gif') }}" class="mario">
+         <img src="{{ url_for('static',filename='tree.png') }}" class="tree">
+         <img src="{{ url_for('static',filename='cloud.png') }}" class="clouds">
+        </div>
+
+        <div class="bottom-ground">
+	   <img src="{{ url_for('static',filename='ground.png') }}" class="ground">
+         <img src="{{ url_for('static',filename='ground.png') }}" class="ground2">
+        </div>
+
+        <audio id="audio1">
+
+        <source src="http://127.0.0.1:5000/sound" type="audio/mp3" />
+
+        </audio>
+
+        <audio id="audio2">
+
+        <source src="http://127.0.0.1:5000/death-sound" type="audio/mp3" />
+
+        </audio>
+
+      <div class="creditos">
+	<p>Efeito sonoro de pulo fornecido pela: <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6462">Pixabay</a></p>
+	<p>Efeito sonoro de fim de jogo fornecido pela: <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=music&amp;utm_content=6008">Pixabay</a></p>
+	<p>Sprites para as nuvens, chão e árvores fornecidos pela: <a href="https://opengameart.org/content/generic-platformer-tiles">OpenGameArt</a></p>
+	<p>Sprite do personagem criado por <a href="https://jesse-m.itch.io/">Jesse Munguia</a> e disponível na <a href="https://jesse-m.itch.io/jungle-pack">Itch.io</a></p>
+	</div>
+    </body>
+</html>
